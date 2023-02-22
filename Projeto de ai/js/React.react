@@ -1,0 +1,46 @@
+class Form extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        formData: {
+          name: "",
+          email: "",
+          message: ""
+        }
+      };
+    }
+  
+    handleChange = event => {
+      const formData = { ...this.state.formData };
+      formData[event.target.id] = event.target.value;
+      this.setState({ formData });
+    };
+  
+    handleSubmit = event => {
+      event.preventDefault();
+      localStorage.setItem("formData", JSON.stringify(this.state.formData));
+      console.log(localStorage.getItem("formData"));
+    };
+    render() {
+        return (
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Name:
+              <input type="text" id="name" value={this.state.formData.name} onChange={this.handleChange}/>
+            </label>
+            <label>
+              Email:
+              <input type="email" id="email" value={this.state.formData.email} onChange={this.handleChange}/>
+            </label>
+            <label>
+              Message:
+              <textarea id="message" value={this.state.formData.message} onChange={this.handleChange} />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+        );
+      }
+    }
+
+    localStorage.setItem("formData", JSON.stringify(this.state.formData));
+    console.log(localStorage.getItem("formData"));

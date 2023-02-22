@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Projeto%20de%20ai.css">
+    <link rel="icon" href="imagens/icon.png">
+    <title>Projeto de AI Contacto</title>
+    <style> 
+      body {
+        background-image: url("imagens/bk.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+      </style>
+</head>
+
+<body >
+
+  
+
+  <header>
+    <a href="Projeto de ai.html" class="logotipo" ><img src="imagens/logo.png" style="width: 250px;height: auto;margin-left: -12%;"></a>
+
+      <!--<div class="tempo-container">
+        <div class="display-date">
+          <span id="day">day</span>,
+          <span id="daynum">00</span>
+          <span id="month">month</span>
+          <span id="year">0000</span>
+        </div>
+        <div class="display-time"></div>
+      </div>-->  
+
+    <nav>
+       <ul>
+           <div class="dropdown"  >
+             <button class="dropbtn">Componentes</button>
+             <div class="dropdown-content">
+              <a href="componentes.html#GPUP">GPU</a>
+              <a href="componentes.html#CPUP">CPU</a>
+              <a href="componentes.html#RAMP">RAM</a>
+             </div>
+           </div> 
+            <li><a href="Novidades.html">Hardware</a></li>
+            <li><a href="Perifericos.html">Periféricos</a></li>
+            <li><a href="Telemoveis.html">Telemóveis</a></li>
+            <li><a href="Contacto.html" class="quadrado">Contacte-nos</a></li>
+       </ul>
+   </nav>
+</header>
+
+    <div class="formlario">
+	    <div class="card">
+		    <div class="imagem-cartao" >
+			    <h2 class="card-heading">
+				  Algo está mal?
+				  <small>Escreva-nos para sabermos.</small>
+			  </h2>
+		    </div>
+
+		      <form class="card-form" >
+			  <div class="input">
+				  <input id="nome" type="text" class="input-field" placeholder="Nome" required/>
+				  <label class="input-label">Nome Completo</label>
+			  </div>
+					<div class="input">
+				  <input id="email" type="email" class="input-field" placeholder="teste@teste.com" required/>
+				  <label class="input-label">Email</label>
+			  </div>
+        <div class="input">
+				  <input id="phone" type="tel" class="input-field" placeholder="356+" pattern="[0-9]{9}" required/>
+				  <label class="input-label">Numero de telefone</label>
+			  </div>
+        <div class="input">
+          <select id="razao" name="razao" required>
+            <option value="Reclamaçao">Reclamação</option>
+            <option value="Sugestao">Sugestão</option>
+            <option value="informação">Informação</option>
+            <option value="Outro">Outro</option>
+          </select>
+			  </div>
+					<div class="input">
+				  <textarea type="text" id="mensagem" style="text-align: justify;" class="input-field" placeholder="Mensagem" required rows="4" cols="10"></textarea>
+				  <label class="input-label">Descriçao da mensagem</label>
+		  	</div>
+		      <div class="action">
+		    	<button class="action-button" onclick="store();notificacao()" >Enviar email</button>
+		    	</div>
+	      	</form>
+          
+		      <div class="card-info">
+		    	<p>A nos enviar este email está a aceitar os <a href="Termos-e-condicoes.html">Termos e Condições</a></p>
+		    </div>
+	    </div>
+    </div>
+
+    
+
+    <script src="js/Projeto%20de%20ai.js"></script>
+</body>
+</html>
